@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="StudentManageFormContext" prefHeight="728.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+   <children>
+      <Pane prefHeight="66.0" prefWidth="816.0" style="-fx-background-color: #1abc9c;">
+         <children>
+            <Text layoutX="281.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Manage">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+               <fill>
+                  <RadialGradient centerX="0.0393258426966292" centerY="0.610576923076923" radius="0.5">
+                     <stops>
+                        <Stop color="#4e73cc" />
+                        <Stop color="#4e73cc" offset="0.22932330827067668" />
+                        <Stop color="#a34955" offset="0.7556390977443604" />
+                        <Stop color="#a34955" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Text>
+            <Label fx:id="lblDate" layoutX="14.0" layoutY="16.0" text="2022-07-22" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="14.0" layoutY="41.0" text="08.24.12" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtStudentID" labelFloat="true" layoutX="105.0" layoutY="127.0" prefHeight="27.0" prefWidth="232.0" promptText="Student ID" unFocusColor="#8d3f78d4">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentName" labelFloat="true" layoutX="407.0" layoutY="127.0" prefHeight="27.0" prefWidth="232.0" promptText="Student Name" unFocusColor="#8d3f78d4">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="105.0" layoutY="187.0" prefHeight="27.0" prefWidth="232.0" promptText="Email" unFocusColor="#8d3f78d4">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="407.0" layoutY="187.0" prefHeight="27.0" prefWidth="232.0" promptText="Contact" unFocusColor="#8d3f78d4">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="105.0" layoutY="250.0" prefHeight="27.0" prefWidth="232.0" promptText="Address" unFocusColor="#8d3f78d4">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNIc" labelFloat="true" layoutX="407.0" layoutY="250.0" prefHeight="27.0" prefWidth="232.0" promptText="NIC" unFocusColor="#8d3f78d4">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAddNewStudent" buttonType="RAISED" layoutX="706.0" layoutY="82.0" onAction="#btnAddNewStudentOnAction" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: #27ae60; -fx-background-radius: 5;" text="+ N E W   " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" focusTraversable="false" layoutX="265.0" layoutY="316.0" onAction="#btnSaveOnAction" prefHeight="32.0" prefWidth="86.0" style="-fx-background-color: #27ae60; -fx-background-radius: 5;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" focusTraversable="false" layoutX="395.0" layoutY="316.0" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="86.0" style="-fx-background-color: #f1c40f; -fx-background-radius: 5;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblStudent" focusTraversable="false" layoutX="14.0" layoutY="402.0" prefHeight="303.0" prefWidth="792.0">
+        <columns>
+          <TableColumn prefWidth="95.0" text="Student ID" />
+          <TableColumn prefWidth="168.0" text="Student Name" />
+            <TableColumn prefWidth="175.0" text="Email" />
+            <TableColumn prefWidth="103.0" text="Contact" />
+            <TableColumn prefWidth="113.0" text="Address" />
+            <TableColumn prefWidth="137.0" text="NIC" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
